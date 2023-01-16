@@ -4,7 +4,7 @@ header {
         & ul li{
             transition: transform 0.3s;
         }
-        & ul li:hover  {
+        & ul li:hover:not(:first-child)  {
             transform: scale(1.3);
         }
         & img{
