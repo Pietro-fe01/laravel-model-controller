@@ -1,7 +1,7 @@
 @extends('layouts.MainLayout')
 
 @section('page-title')
-    Single movie
+    {{ $movie->title }}
 @endsection
 
 @section('main-content')
