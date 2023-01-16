@@ -1,0 +1,9 @@
+header {
+    background-color: white;
+
+    & .header-navigation {
+        & img{
+            width: 80px;
+        }
+    }
+}
