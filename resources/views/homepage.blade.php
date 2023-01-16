@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.MainLayout')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('page-title')
+    {{-- Movie | --}} Homepage
+@endsection
 
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-
-    <main class="bg-light">
-        <h1>Homepage</h1>
-    </main>
-
-</body>
-
-</html>
+@section('main-content')
+    <section class="movies-container">
+        <ul>
+            @foreach ($movies as $movie)
+                <li>
+                    <div>{{ $movie->title }}</div>
+                    <div>{{ $movie->original_title }}</div>
+                    <div>{{ $movie->nationality }}</div>
+                    <div>{{ $movie->date }}</div>
+                    <div>{{ $movie->vote }}</div>
+                </li>
+            @endforeach
+        </ul>
+    </section>
+@endsection
