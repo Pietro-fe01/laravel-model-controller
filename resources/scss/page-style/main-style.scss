@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    .movies-container{
+        & .movie-card{
+            width: calc(100% / 5 - 40px);
+            margin: 0 20px;
+        }
+    }
+}

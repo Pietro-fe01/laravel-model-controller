@@ -1,3 +1,3 @@
-<footer>
-    <h1>Footer</h1>
+<footer class="text-center py-2">
+    <small>Made with ❤️ by Class 76</small>
 </footer>
