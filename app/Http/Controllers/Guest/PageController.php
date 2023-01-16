@@ -15,6 +15,11 @@ class PageController extends Controller {
 
     public function single_movie($i) {
         $movies = Movie::all();
+
+        if( $i > count($movies) - 1 ){
+            abort(404);
+        }
+
         $movie = $movies[$i];
 
         return view('SingleMovie', compact('movie'));

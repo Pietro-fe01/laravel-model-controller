@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('_homepage');
 
-Route::get('/movies/movie/{id}', [PageController::class, 'single_movie'])->name('_singlemovie');
+Route::get('/movies/movie/{id}', [PageController::class, 'single_movie'])->name('_singlemovie')->where('id', '[0-9]+');
 
 
 
