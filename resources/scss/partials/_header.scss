@@ -1,7 +1,12 @@
 header {
     background-color: white;
-
     & .header-navigation {
+        & ul li{
+            transition: transform 0.3s;
+        }
+        & ul li:hover  {
+            transform: scale(1.3);
+        }
         & img{
             width: 80px;
         }
