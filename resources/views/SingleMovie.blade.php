@@ -12,8 +12,10 @@
                 {{ $movie->title }}
             </div>
             <div>
-                <strong>Original title:</strong>
-                {{ $movie->original_title }}
+                @if ($movie->title !== $movie->original_title)
+                    <strong>Original title:</strong>
+                    {{ $movie->original_title }}
+                @endif
             </div>
             <div>
                 <strong>Nationality:</strong>

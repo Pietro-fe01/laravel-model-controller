@@ -13,14 +13,8 @@ class PageController extends Controller {
         return view('Homepage', compact('movies'));
     }
 
-    public function single_movie($i) {
-        $movies = Movie::all();
-
-        if( $i > count($movies) - 1 ){
-            abort(404);
-        }
-
-        $movie = $movies[$i];
+    public function single_movie($id) {
+        $movie = Movie::findOrFail($id);
 
         return view('SingleMovie', compact('movie'));
     }

@@ -7,16 +7,18 @@
 @section('main-content')
     <section class="movies-container text-white py-5">
         <div class="container d-flex flex-wrap">
-            @foreach ($movies as $i => $movie)
-                <a href="{{ route('_singlemovie', $i) }}" class="card text-dark movie-card mb-5 p-2 text-decoration-none">
+            @foreach ($movies as $movie)
+                <a href="{{ route('_singlemovie', $movie->id) }}" class="card text-dark movie-card mb-5 p-2 text-decoration-none">
                     <div>
                         <div>
                             <strong>Title:</strong>
                             {{ $movie->title }}
                         </div>
                         <div>
-                            <strong>Original title:</strong>
-                            {{ $movie->original_title }}
+                            @if ($movie->title !== $movie->original_title)
+                                <strong>Original title:</strong>
+                                {{ $movie->original_title }}
+                            @endif
                         </div>
                         <div>
                             <strong>Nationality:</strong>
